@@ -1,0 +1,12 @@
+<div [ngClass]="{'list-group-item': true,
+                 'list-group-item-success' : postUnique._loveIts > 0,
+                 'list-group-item-danger' : postUnique._loveIts < 0
+                }">
+     <h2>{{postUnique._title}}</h2>
+     <p>{{postUnique._content}}</p>
+     <footer>{{postUnique._created_at | date: 'short'}}</footer>
+
+    <button class="btn btn-success" (click)="onClickLove()">Love It !</button>
+    <button class="btn btn-danger" (click)="onClickDontLove()">Don't love it!</button>
+
+</div>
